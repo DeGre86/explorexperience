@@ -6,7 +6,7 @@ const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const number = (value, digits = 1) => new Intl.NumberFormat('de-DE', { minimumFractionDigits: digits, maximumFractionDigits: digits }).format(value);
 const state = { page: 'home', selected: null, data: null, map: null, marker: null, dayLayer: null, view: 'all', live: false, activity: null };
 const icon = name => `<svg aria-hidden="true" viewBox="0 0 ${name === 'bike' ? '32 32' : '24 24'}"><use href="#i-${name}"/></svg>`;
-const pageNames = { home: 'Europa mit dem Rad', tour: 'Die Tour', live: 'Aktueller Standort', journal: 'Unterwegs', daily: 'Tagesvideos', film: 'Tourfilm', mapprivacy: 'Karten & Datenschutz' };
+const pageNames = { home: 'Europa mit dem Rad', tour: 'Die Tour', live: 'Aktueller Standort', journal: 'Unterwegs', daily: 'Tagesvideos', film: 'Tourfilm', mapprivacy: 'Karte & Quellen' };
 
 async function readJSON(file) {
   const response = await fetch(file);
