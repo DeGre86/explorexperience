@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; media-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#11131d">
+  <meta name="description" content="Europa-Radreise 2027: geplante Route vom Rhein über das Mittelmeer nach Lissabon und zurück. Tourübersicht, Standort und Reisetagebuch.">
+  <title>ExploreXperience — Europa mit dem Rad</title>
+  <link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+  <link rel="stylesheet" href="vendor/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="vendor/leaflet.js" defer></script>
+  <script src="sleep-policy.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Zum Inhalt</a>
+  <svg class="icon-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol>
+    <symbol id="i-next" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-bike" viewBox="0 0 32 32"><circle cx="8" cy="23" r="6"/><circle cx="25" cy="23" r="6"/><path d="m8 23 6-12 6 12H8m6-12h8l3 12M11 8h6m3-4h4l-2 7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 10c0 6-7 11-7 11S5 16 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/></symbol>
+    <symbol id="i-wind" viewBox="0 0 24 24"><path d="M3 8h12a3 3 0 1 0-3-3M3 12h16a3 3 0 1 1-3 3M3 16h5a3 3 0 1 1-3 3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 1v4m0 14v4M1 12h4m14 0h4"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M7 5h9a4 4 0 0 1 0 8H8a3 3 0 0 0 0 6h9"/></symbol>
+  </defs></svg>
+
+  <header class="site-header">
+    <a class="brand" href="#/" aria-label="ExploreXperience – Startseite"><span class="brand-mark">e<span>×</span></span><span>explore<span class="brand-light">xperience</span><small>EUROPA-RADREISE 2027</small></span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menü öffnen"><span></span><span></span></button>
+    <nav id="main-nav" aria-label="Hauptnavigation">
+      <a href="#/" data-nav="home">Start</a><a href="#/tour" data-nav="tour">Die Tour</a><a href="#/live" data-nav="live">Live-Ticker <span class="nav-dot"></span></a><a href="#/journal" data-nav="journal">Unterwegs</a><a href="#/daily" data-nav="daily">Tagesvideos</a><a href="#/film" data-nav="film">Tourfilm</a>
+    </nav>
+    <a class="header-cta" href="#/live">Zur Standortkarte <svg><use href="#i-arrow"/></svg></a>
+  </header>
+
+  <main id="content" tabindex="-1">
+    <section data-page="home" aria-labelledby="hero-title">
+      <div class="hero">
+        <div class="hero-photo" role="img" aria-label="Illustration einer leeren Küstenstraße am Atlantik im Abendlicht"></div><div class="hero-shade"></div>
+        <div class="hero-coordinates">50°56′ N &nbsp; 06°57′ E <span>STARTPUNKT KÖLN</span></div>
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="short-line"></span> EUROPA-RADREISE · FRÜHJAHR 2027</p>
+          <h1 id="hero-title">Europa entdecken.<br><em>Mit dem Rad.</em></h1>
+          <p class="hero-intro">Eine geplante Rundreise von Köln über Frankreich und Spanien nach Portugal. Hier stehen Route, Reisestand und Aufzeichnungen zur Tour 2027.</p>
+          <div class="hero-actions"><a class="button button-mint" href="#/tour">Tourübersicht öffnen <svg><use href="#i-next"/></svg></a><a class="text-link" href="#/live"><span class="live-ring"></span> Zur Live-Karte</a></div>
+          <div class="hero-person"><span class="person-line"></span><p>Reisezeitraum<br><strong>26. März bis 2. Mai 2027 · geplant</strong></p></div>
+        </div>
+        <div class="hero-side-label">RHEIN · MITTELMEER · ATLANTIK</div>
+        <div class="hero-image-credit">Atmosphärische KI-Illustration · kein Tourfoto</div>
+        <a class="scroll-cue" href="#home-overview"><span>ZUR TOURÜBERSICHT</span>↓</a>
+      </div>
+      <div class="journey-facts"><div><strong>7.492<span> km</span></strong><small>GEPLANTE GESAMTSTRECKE</small></div><div><strong>38<span> Tage</span></strong><small>GEPLANTE REISEDAUER</small></div><div><strong>26.03.<span> — 02.05.</span></strong><small>DER PLAN FÜR 2027</small></div><div class="facts-note"><img class="rider-small" src="assets/rider-comic.png" alt="Comic-Radfahrer auf einem HEPHA Trekking 7"><p>Europa-Rundreise<br><strong>Start und Ziel am Rhein</strong></p></div></div>
+      <section id="home-overview" class="home-overview section-wrap">
+        <div class="overview-copy"><p class="eyebrow">01 / TOURÜBERSICHT</p><h2>Von Köln nach Lissabon.<br><em>Und zurück.</em></h2><p>Die geplante Europa-Rundreise führt im Frühjahr 2027 vom Rhein durch Frankreich an das Mittelmeer, weiter durch Spanien und Portugal bis nach Lissabon.</p><p>Der Rückweg verläuft über Porto, Galicien, Nordspanien und Frankreich. Die Tour ist mit dem HEPHA Trekking 7 Ultra Long Range geplant.</p><a class="text-link accent" href="#/tour">Tourdetails ansehen <svg><use href="#i-next"/></svg></a></div>
+        <a class="route-poster" href="#/tour" aria-label="Gesamte geplante Route ansehen"><div class="poster-top"><span>GEPLANTE GESAMTSTRECKE</span><svg><use href="#i-arrow"/></svg></div><div class="atlas-art" data-atlas></div><div class="poster-bottom"><span>Köln <b>↔</b> Lissabon</span><small>V7 · GEPLANTE ROUTE</small></div></a>
+      </section>
+      <section class="follow-strip section-wrap"><div><p class="eyebrow">STANDORT UND REISEVERLAUF</p><h2>Standort, Strecke<br>und <em>Wetter.</em></h2></div><div><p>Die Kartenansicht zeigt später die letzte gemeldete Position, Tages- und Gesamtkilometer sowie Ortsname und Wetter am Standort.</p><a class="button button-outline" href="#/live">Live-Ticker ansehen <svg><use href="#i-arrow"/></svg></a><span class="preview-inline">Aktuell: Vorschau mit Demodaten</span></div></section>
+      <section class="home-journal section-wrap"><div class="section-heading"><div><p class="eyebrow">AUFZEICHNUNGEN ZUR TOUR</p><h2>Reisetagebuch.</h2></div><a class="text-link" href="#/journal">Zum Reisetagebuch <svg><use href="#i-next"/></svg></a></div><div class="journal-teaser"><div class="journal-image"><span>UNTERWEGS / 2027</span></div><div><p class="eyebrow">VOR DER REISE</p><h3>Notizen, Bilder<br>und Videos.</h3><p>Hier können während der Reise Tagesnotizen, Bilder und Videos gesammelt werden. Bisher sind noch keine Einträge vorhanden.</p><a class="text-link accent" href="#/journal">Tagebuch öffnen <svg><use href="#i-next"/></svg></a></div></div></section>
+    </section>
+
+    <section data-page="tour" hidden aria-labelledby="tour-title" class="tour-page">
+      <div class="page-intro section-wrap"><p class="eyebrow">DIE TOUR / EUROPA-RADREISE 2027</p><h1 id="tour-title">Die geplante<br><em>Europa-Rundreise.</em></h1><p>Die Route führt vom Rhein über die Rhône und das Mittelmeer nach Portugal und anschließend über Nordspanien und Frankreich zurück.</p></div>
+      <div class="tour-layout section-wrap"><div class="tour-route-panel"><div class="atlas-art" data-atlas></div><span class="map-caption">Übersicht der echten V7-Planroute · keine Navigation</span><a class="button button-mint" href="#/live">Route auf der Karte öffnen <svg><use href="#i-arrow"/></svg></a></div><div class="tour-chapters"><p class="eyebrow">DIE ROUTE IN FÜNF ABSCHNITTEN</p>
+        <details open><summary><span>01</span><div>Rhein, Doubs und Saône<small>KÖLN → BASEL → LYON</small></div><b>+</b></summary><p>Start am Rhein in Köln. Über Basel, den Doubs und die Saône führt die geplante Route nach Lyon.</p></details>
+        <details><summary><span>02</span><div>Rhônetal und Mittelmeerküste<small>RHÔNE → SÈTE → ANDALUSIEN</small></div><b>+</b></summary><p>Durch das Rhônetal nach Sète, anschließend entlang der französischen und spanischen Mittelmeerküste über Katalonien nach Andalusien.</p></details>
+        <details><summary><span>03</span><div>Algarve und Lissabon<small>ANDALUSIEN → ALGARVE → LISSABON</small></div><b>+</b></summary><p>Über Huelva und die Algarve nach Portugal. In Lissabon ist ein Ruhetag vorgesehen, bevor der Rückweg beginnt.</p></details>
+        <details><summary><span>04</span><div>Portugal und Nordspanien<small>PORTO → SANTIAGO → BIARRITZ</small></div><b>+</b></summary><p>Die portugiesische Küste, Galicien und der Weg durch Nordspanien. Über León, Burgos und Pamplona geht es zurück zur Biskaya.</p></details>
+        <details><summary><span>05</span><div>Frankreich und Rückkehr zum Rhein<small>BORDEAUX → FRANKREICH → RHEIN</small></div><b>+</b></summary><p>Von Bordeaux durch Frankreich, östlich an Paris vorbei und über Belgien zurück zum Rhein. Geplantes Ziel ist Köln beziehungsweise Bonn.</p></details>
+      </div></div>
+      <div class="trip-notes section-wrap"><div><span class="note-number">35</span><h3>Fahrtage geplant</h3><p>Die Planung umfasst durchschnittlich rund 214 Kilometer pro Fahrtag. Änderungen je nach Wetter, Strecke und Tagesverlauf sind möglich.</p></div><div><span class="note-number">03</span><h3>Geplante Ruhetage</h3><p>Geplante Ruhetage bei Calafell, in Lissabon und im Raum Biarritz. Dazu sieben volle Tage Reserve nach dem geplanten Reiseende.</p></div><div><span class="note-number">01</span><h3>Fahrrad und Aufzeichnung</h3><p>Unterwegs auf dem HEPHA Trekking 7 Ultra Long Range. Die gefahrenen Tracks bleiben lokal gespeichert und dienen später der Videoarbeit.</p></div></div>
+      <div class="tour-cta section-wrap"><p>Gesamtstrecke<br>und <em>Standortkarte.</em></p><a class="button button-mint" href="#/live">Karte öffnen <svg><use href="#i-next"/></svg></a></div>
+    </section>
+
+    <section data-page="live" hidden aria-labelledby="live-title" class="live-page">
+      <div class="live-heading"><div><p class="eyebrow">DIE REISE AUF EINEN BLICK</p><h1 id="live-title">Aktueller <em>Standort.</em></h1></div><span class="demo-badge"><span></span> VORSCHAU · DEMODATEN</span></div>
+      <div class="live-notice" id="live-notice"><svg><use href="#i-pin"/></svg><p>Du siehst einen <strong>simulierten Reisestand</strong>. Es werden noch keine echten Standort- oder Wetterdaten übertragen.</p></div>
+      <div class="live-layout"><aside class="live-sidebar" aria-label="Reisestand">
+        <div class="location-card"><p class="eyebrow">BEISPIEL-STANDORT</p><div class="location-title"><svg><use href="#i-pin"/></svg><h2 id="location-name">–</h2></div><p id="location-country">–</p><p id="sleep-status" class="sleep-status" aria-live="polite"></p><span class="location-time" id="position-time">Beispielmeldung · 14:00 Uhr</span></div>
+        <div class="distance-card"><div><span>Heute unterwegs</span><strong id="today-km">–</strong></div><div><span>Auf der gesamten Tour</span><strong id="total-km">–</strong></div><div class="progress-track"><span id="tour-progress"></span></div><p id="progress-label">–</p></div>
+        <div class="ride-small-stats"><div><svg><use href="#i-clock"/></svg><span>Aufzeichnung<strong id="ride-duration">–</strong></span></div><div><svg><use href="#i-route"/></svg><span>Ø im Beispiel<strong id="ride-average">–</strong></span></div></div>
+        <div class="weather-card"><div class="weather-top"><svg><use href="#i-sun"/></svg><div><strong id="weather-temp">–</strong><span id="weather-text">–</span></div></div><p><svg><use href="#i-wind"/></svg><span id="weather-wind">–</span><small>Wetter: Demo</small></p></div>
+        <div class="demo-selector"><label for="demo-location">Demo-Standort auswählen</label><select id="demo-location" aria-label="Demo-Standort auswählen"></select><small>Alle Zahlen und Wetterwerte sind Beispiele.</small></div>
+      </aside><div class="map-column"><div class="map-toolbar"><div class="map-view-toggle" role="group" aria-label="Kartenausschnitt"><button id="show-all" class="active" aria-pressed="true">Gesamte Tour</button><button id="show-day" aria-pressed="false">Tagesabschnitt</button></div><button class="map-position-button" id="show-position" aria-label="Zum Beispielstandort zoomen"><svg><use href="#i-target"/></svg><span>Zum Standort</span></button></div><div class="map-frame"><div id="live-map" aria-label="Interaktive Karte der geplanten Europa-Radreise"></div><div class="map-badge"><span class="live-ring"></span><span>DEMO-POSITION</span></div><div class="map-fallback" id="map-fallback" hidden>Die Karte konnte nicht geladen werden. Bitte die Seite neu laden.</div></div><div class="map-bottom"><span><i></i> Geplante Route</span><span><i class="legend-day"></i> Tagesabschnitt (Demo)</span><span class="map-hint">Zoomen und verschieben · keine Navigation</span></div><p class="map-provider-status" id="map-provider-status" role="status">Eigene Übersichtskarte · Ortsnamen je nach Zoom · ohne externe Kartenabrufe.</p><a class="map-privacy-link" href="#/mapprivacy">Kartendaten &amp; Datenschutz</a><p class="map-update-note">Später werden Standort und Kilometerstände ungefähr stündlich aktualisiert. Bei fehlendem Netz bleibt der letzte bekannte Stand mit Messzeit sichtbar. Die Planroute ist kein Nachweis der tatsächlich gefahrenen Strecke.</p></div></div>
+    </section>
+
+    <section data-page="journal" hidden aria-labelledby="journal-title" class="journal-page">
+      <div class="page-intro section-wrap"><p class="eyebrow">DAS REISETAGEBUCH / BALD VON UNTERWEGS</p><h1 id="journal-title">Notizen zur<br><em>Radreise.</em></h1><p>Tagesnotizen, Bilder und Videos zur Europa-Rundreise 2027. Die Einträge werden während der Reise ergänzt.</p></div>
+      <div class="journal-wide section-wrap"><div class="journal-photo"><div><span class="eyebrow">FRÜHJAHR 2027</span><h2>Europa-Radreise<br><em>2027.</em></h2></div><span class="image-credit">KI-Illustration · kein Tourfoto</span></div><div class="journal-empty"><span class="journal-counter">00</span><div><p class="eyebrow">NOCH KEINE EINTRÄGE</p><h3>Geplanter Start:<br>26. März 2027.</h3><p>Die Reise wird derzeit vorbereitet. Tagesberichte, Fotos und Videos können später hier abgelegt werden.</p><a class="button button-outline" href="#/tour">Geplante Route ansehen <svg><use href="#i-next"/></svg></a></div></div></div>
+    </section>
+
+    <section data-page="daily" hidden aria-labelledby="daily-title" class="videos-page">
+      <div class="page-intro section-wrap"><p class="eyebrow">VIDEOARCHIV / TAGESVIDEOS</p><h1 id="daily-title">Die Reise.<br><em>Tag für Tag.</em></h1><p>Die Videos zu den einzelnen Reisetagen. Bis zum Start steht hier die KI-Vorschau zur geplanten Tour.</p></div>
+      <div class="section-wrap video-sections"><div class="section-heading"><div><p class="eyebrow">VOR DER REISE</p><h2>Die <em>Vorschau.</em></h2></div><span class="video-count">1 Vorschau · noch keine Tagesvideos</span></div>          <article class="video-feature">
+            <div class="portrait-player"><video id="teaser-video" controls playsinline preload="metadata" poster="assets/videos/ki-vorschau-cover.jpg" aria-label="KI-Vorschau zur Europa-Radreise 2027, 34 Sekunden"><source src="assets/videos/europa-2027-ki-vorschau.mp4" type="video/mp4">Dein Browser unterstützt die Videowiedergabe nicht. <a href="assets/videos/europa-2027-ki-vorschau.mp4">MP4 öffnen</a></video></div>
+            <div class="video-details"><span class="video-tag">KI-VORSCHAU · VOR DER TOUR</span><h3>Europa-Radreise<br>2027.</h3><p>Ein kurzer Blick auf die geplante Rundreise: mit animierter Strecke, KI-Motiven und Musik.</p><dl class="video-facts"><div><dt>Länge</dt><dd>34 Sekunden</dd></div><div><dt>Format</dt><dd>Hochkant · 9:16</dd></div><div><dt>Inhalt</dt><dd>KI-Teaser · keine Reiseaufnahmen</dd></div></dl><p class="video-note">Die Tagesvideos werden während der Tour ergänzt und nach Reisetag geordnet. Diese Vorschau ist noch kein Tagesbericht.</p><a class="text-link accent" href="assets/videos/europa-2027-ki-vorschau.mp4" download>Video herunterladen <svg><use href="#i-next"/></svg></a><p id="video-error" class="video-error" role="status" hidden>Das Video konnte nicht geladen werden. Du kannst es über den Download-Link öffnen.</p></div>
+          </article><div class="video-page-switch"><span>Der Film zur gesamten Reise bekommt einen eigenen Platz.</span><a class="text-link accent" href="#/film">Zum Tourfilm <svg><use href="#i-next"/></svg></a></div></div>
+    </section>
+    <section data-page="film" hidden aria-labelledby="film-title" class="videos-page">
+      <div class="page-intro section-wrap"><p class="eyebrow">VIDEOARCHIV / TOURFILM</p><h1 id="film-title">Die gesamte Tour.<br><em>Ein Film.</em></h1><p>Der Rückblick auf die Europa-Radreise 2027 – mit ausgewählten Aufnahmen von unterwegs.</p></div>
+      <div class="section-wrap video-sections film-page-content"><span class="video-tag">NACH DER TOUR</span><div class="tour-film-placeholder"><div class="film-symbol" aria-hidden="true"><span>▶</span></div><div><p class="eyebrow">NOCH NICHT VERFÜGBAR</p><h3>Europa-Radreise 2027</h3><p>Nach der Rückkehr entsteht hier der Film mit den ausgewählten Aufnahmen der gesamten Reise.</p><span class="film-period">Geplanter Reisezeitraum · 26. März bis 2. Mai 2027</span></div></div><div class="video-page-switch"><span>Einzelne Etappen gibt es im Bereich Tagesvideos.</span><a class="text-link accent" href="#/daily">Zu den Tagesvideos <svg><use href="#i-next"/></svg></a></div></div>
+    </section>
+    <section data-page="mapprivacy" hidden aria-labelledby="mapprivacy-title" class="legal-page section-wrap">
+      <div class="page-intro"><p class="eyebrow">EIGENE ÜBERSICHTSKARTE</p><h1 id="mapprivacy-title">Karte &amp;<br><em>Datenschutz.</em></h1><p>Die Karte wird aus Dateien dieser Website gezeichnet. Es werden keine Kartenserver von Drittanbietern eingebunden.</p></div>
+      <div class="legal-copy"><h2>So funktioniert die Karte</h2><p>Länderumrisse, Ortsnamen und geplante Route werden zusammen mit der Website geladen und im Browser dargestellt. Es gibt keine externen Kartenkacheln, keine Geocoding-Abfragen und keine externe Standortabfrage. Die GPS-Position des Besuchers wird nicht angefordert. Zoomen und Verschieben erzeugen keine Anfragen an Kartenanbieter. Die Karte setzt keine eigenen Cookies und speichert keine Einstellungen im Local Storage.</p><p>Die Karte dient als grobe Orientierung. Sie zeigt keine vollständigen Straßennetze oder Navigationsanweisungen. Ortsnamen erscheinen abhängig von Zoom, Kartenausschnitt und verfügbarem Platz. Die Planroute ist von der tatsächlich gefahrenen Strecke zu unterscheiden.</p>
+      <h2>Umrisse und Ortsnamen</h2><p>Länder- und Küstenumrisse: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>, Public Domain gemäß <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener">Nutzungsbedingungen</a>. Für diese Darstellung wurden die Länder ausgewählt und die Geometrien vereinfacht.</p><p>Ortsnamen und Koordinaten: <a href="https://www.geonames.org/" target="_blank" rel="noopener">GeoNames</a>, Datenauszug cities5000 vom 7. November 2026, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">Creative Commons Namensnennung 4.0 International</a>. Der Auszug wurde auf Westeuropa begrenzt, reduziert, nach Einwohnerzahl sortiert und einzelne Namen wurden übersetzt. Die Daten werden ohne Gewähr für Vollständigkeit oder Aktualität bereitgestellt. Quellenangaben sind auch auf der Karte sichtbar.</p><p>Die Links zu Quellen öffnen erst bei Auswahl deren Website; die Kartenanzeige selbst verbindet sich nicht mit diesen Diensten. Die Kartenbibliothek Leaflet wird ebenfalls als lokale Datei ausgeliefert; der Lizenztext liegt unter <a href="vendor/LEAFLET-LICENSE.txt">Leaflet-Lizenz</a>.</p>
+      <h2>Website-Hosting</h2><p>Beim Laden der Website und ihrer Dateien erhält deren Hoster technisch notwendige Verbindungsdaten wie die IP-Adresse. Die lokale Kartenanzeige beseitigt diese Hosting-Verarbeitung nicht. Vor einer Veröffentlichung müssen die Angaben zum Website-Verantwortlichen und die Datenschutzinformationen zum endgültigen Hosting vervollständigt werden. Diese Kartenseite ersetzt keine vollständige Datenschutzerklärung der Website.</p><a class="button button-outline" href="#/live">Zur Karte <svg><use href="#i-next"/></svg></a></div>
+    </section>
+    <noscript><p class="noscript-note">Die Startseite ist ohne JavaScript lesbar. Für die interaktive Karte und weitere Ansichten bitte JavaScript aktivieren.</p></noscript>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="#/"><span class="brand-mark">e<span>×</span></span><span>explore<span class="brand-light">xperience</span></span></a><p>Europa-Radreise 2027<br><span>Tourübersicht · Standort · Tagebuch · Tagesvideos · Tourfilm</span></p><div><a class="footer-privacy" href="#/mapprivacy">Karten &amp; Datenschutz</a><button id="about-button">Über diese Vorschau</button><span>Testversion · Demodaten · private Tourübersicht</span></div></footer>
+  <dialog id="about-dialog" aria-labelledby="about-title"><button class="dialog-close" aria-label="Dialog schließen">×</button><p class="eyebrow">EXPLOREXPERIENCE / VORSCHAU</p><h2 id="about-title">Hinweise zur<br>Vorschau.</h2><p>Diese lokale Vorschau zeigt die geplante Europa-Radreise 2027. Die Übersicht basiert auf der V7-Planroute vom 1. November 2026. Alle Standort-, Wetter- und Fortschrittsanzeigen im Live-Ticker sind ausdrücklich simuliert.</p><p>Das Titelmotiv ist eine KI-generierte Illustration und kein Foto dieser Reise. Die Übersichtskarte nutzt lokal gespeicherte Natural-Earth-Daten. Ortsnamen stammen aus einem lokal gespeicherten GeoNames-Auszug. Die Karte wird vollständig aus lokalen Dateien gezeichnet; es gibt keine externen Kartenabrufe. Informationen dazu stehen unter „Karten &amp; Datenschutz“. Es sind keine Analyse- oder Werbedienste eingebunden.</p><p>Die Seite ist als private Tourübersicht vorgesehen. Die Anbindung der tatsächlichen Positionsdaten ist noch nicht eingerichtet.</p><button class="button button-mint dialog-done">Alles klar <svg><use href="#i-next"/></svg></button></dialog>
+</body>
+</html>
